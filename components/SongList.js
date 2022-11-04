@@ -2,7 +2,7 @@ import React from "react";
 import ListItem from "./ListItem";
 import SongForm from "./SongForm";
 
-function SongList({songs, selectedGenre}) {
+function SongList({songs, onItemTitleAdd, selectedGenre}) {
     const songItems = songs.map(song => <ListItem key= {song.id} song={song} genre={selectedGenre}/>)
    // console.log (" thi is songItems:",songItems)
    return (
@@ -17,8 +17,8 @@ function SongList({songs, selectedGenre}) {
                
         
        
-        </ul>
-        <SongForm />
+        </ul> 
+        <SongForm onSubmit={ onItemTitleAdd} />
         {songItems} 
         </div>
    )

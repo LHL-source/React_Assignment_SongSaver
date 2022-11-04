@@ -1,14 +1,22 @@
 import React, {useState} from 'react';
 
-const SongForm =()=>{
+const SongForm =({onSubmit})=>{
     const [inputTitle, setInputTitle]=useState("");
 
     function onButtonPress(){
+
+        console.log("this is songform inputTitle before if:",inputTitle)
+        console.log("this is songform setInputTitle before if:",setInputTitle)
+        
+
         if(inputTitle.length >0){
         console.log("this is SongForm/function/onButtonPress")
-        console.log(`this is inputTitle:${inputTitle}`)
+        console.log(`this is inputTitle after if:${inputTitle}`)
+        console.log("this is songform inputTitle after if:",inputTitle)
 
-       // onSubmit(inputTitle);
+
+        onSubmit(inputTitle);
+        console.log("this is songform:",inputTitle)
         setInputTitle("");
     }}//function
 

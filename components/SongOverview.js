@@ -16,13 +16,30 @@ class SongOverview extends Component {
               selectedGenre: "all"
              };//state
      }//constructor
+     addItemToSongList=(title)=>{
+        this.setState({
+            songs:[
+                ...this.state.songs,
+                {id: this.state.songs.length + 1,
+                title: title,
+                 }//id
+            ]//songs
+
+        })//setState
+
+     }//title
+
 //hier komen de functies
 
 
         render() {
             return (
                 <div className="overview">
-                    <SongList songs={this.state.songs} selectedGenre={this.state.selectedGenre}/>
+                    <SongList 
+                    songs={this.state.songs} 
+                    selectedGenre={this.state.selectedGenre}
+                    onItemTitleAdd={this.addItemToSongList}
+                    />
 
                 </div>
                 
