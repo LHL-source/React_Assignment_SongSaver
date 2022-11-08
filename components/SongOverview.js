@@ -9,20 +9,24 @@ class SongOverview extends Component {
         super(props);
         this.state= {
             songs:[
-             {id: 1, title:"Dansing queen", artist:"Abba", genre:"pop", rating: "4" },
-             {id: 2, title:" Rock the boat", artist:"Rocky", genre:"Rock", rating: "5"},
+             {id: 1, title:"Dansing queen", artist:"Abba", genre:"pop", rating: "1" },
+             {id: 2, title:" Rock the boat", artist:"Rocky", genre:"Rock", rating: "2"},
              {id: 3, title:"JazzSong", artist:"Jazzzz", genre:"Jazz", rating: "3"},
               ],
               selectedGenre: "all"
              };//state
      }//constructor
-     addItemToSongList=(title)=>{
+
+     addItemToSongList=(id, title, artist, genre, rating)=>{
         this.setState({
             songs:[
                 ...this.state.songs,
                 {id: this.state.songs.length + 1,
                 title: title,
-                 }//id
+                artist: artist,
+                genre: genre,
+                rating: rating,
+                }
             ]//songs
 
         })//setState
@@ -48,12 +52,3 @@ class SongOverview extends Component {
 }//component
 
 export default SongOverview;
-//regel 9 t/m11: song:[
-  //  { id:1, title:"abba"},
-//],
-//regel 17 this.state.song.title
-//R.13 t/m 6 (tussen constructor en render): handleChange(event){
-//     const {name, value} = event.target
-//     this.setState({[song]:value})
-// }
-//R.28:<h1>song:{this.state.song}</h1>
