@@ -17,7 +17,7 @@ class SongOverview extends Component {
              };//state
      }//constructor
 
-     addItemToSongList=(id, title, artist, genre, rating)=>{
+     addItemToSongList=( title, artist, genre, rating)=>{
         this.setState({
             songs:[
                 ...this.state.songs,
