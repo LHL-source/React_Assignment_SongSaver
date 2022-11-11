@@ -1,6 +1,7 @@
 //import React from "react";
 import React, {Component} from 'react';
 import SongList from './SongList';
+import SongSort from './SongSort';
 
 
 
@@ -27,11 +28,16 @@ class SongOverview extends Component {
                 genre: genre,
                 rating: rating,
                 }
-            ]//songs
+            ],//songs
+            sort : "",
 
         })//setState
 
-     }//title
+     }//title   
+
+     sortSongs=()=>{
+      return  console.log("Entering songoverview/function:sortSong");
+     }
 
 //hier komen de functies
 
@@ -43,6 +49,11 @@ class SongOverview extends Component {
                     songs={this.state.songs} 
                     selectedGenre={this.state.selectedGenre}
                     onItemTitleAdd={this.addItemToSongList}
+                    />
+
+                    <SongSort 
+                    sortering={this.state.sort} 
+                    handleClickSort={this.sortSongs} 
                     />
 
                 </div>
