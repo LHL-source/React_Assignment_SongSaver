@@ -9,7 +9,7 @@ import {NotFound} from "./pages/NotFound"
 
 function App() {
   return (
-      
+      <div>
       <nav>
           <ul>
             <li>
@@ -27,6 +27,7 @@ function App() {
 
           </ul>
       </nav>
+    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" elememt ={<About />} />
@@ -43,6 +44,7 @@ function App() {
        2022</h1>
      <h1><SongOverview /></h1>
      
+    </div>
     </div>
   );//return
 }//App
