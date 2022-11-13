@@ -5,14 +5,14 @@ function SongSort ({sortering, handleClickSort}) {
     // console.log(`Entering SongSort`);
     return (
 
-        <form className="songsort">
+        <form className="sortering">
             <p>
               How to sort the songs?  
             </p>
 
         <select 
-        name="songsort"
-        //value={sortering.value}
+        name="sortering"
+       // value={sortering.value}
         onChange={handleClickSort}
         >
             <option value="">--choose please an item---</option>
