@@ -4,7 +4,7 @@ import SongOverview from './components/SongOverview.js';
 import { Link,  Route, Routes } from "react-router-dom"
 import {Home} from "./pages/Home"
 import {About} from "./pages/About"
-import {NotFound} from "./pages/NotFound"
+
 
 
 function App() {
@@ -13,17 +13,13 @@ function App() {
       <nav>
           <ul>
             <li>
-              <Link to="/">Homee</Link>
-              
+              <Link to="/">Home</Link>
+            </li>
 
-           <li>
-           <Link to="/about">aboutt</Link>
+            <li>
+           <Link to="/about">about</Link>
            </li>
-           </li>
-
-           <li>
-              <Link to="/notfound">notfounddd</Link>
-           </li>
+           
 
           </ul>
       </nav>
@@ -31,7 +27,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" elememt ={<About />} />
-        <Route path="/notfound" element={<NotFound />}/>
 
       </Routes>
     
