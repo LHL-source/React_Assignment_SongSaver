@@ -18,8 +18,7 @@ function SongSort ({sortering, handleClickSort}) {
             <option value="">--choose please an item---</option>
             <option value="TAZ">title a-z</option>
             <option value="TZA">title z-a</option>
-            <option value="AAZ">artist a-z</option>
-            <option value="AAZ">artist a-z</option>
+            
             <option value="SHL">stars 5-1</option>
             <option value="SLH">starts 1-5</option>
            
@@ -31,3 +30,6 @@ function SongSort ({sortering, handleClickSort}) {
 
 
 export default SongSort;
+
+//regel 21<option value="AAZ">artist a-z</option>
+//regel 22<option value="AAZ">artist a-z</option>

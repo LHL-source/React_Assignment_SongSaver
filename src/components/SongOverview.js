@@ -10,8 +10,8 @@ class SongOverview extends Component {
         super(props);
         this.state= {
             songs:[
-             {id: 1, title:"Dansing queen", artist:"Abba", genre:"pop", rating: "1" },
-             {id: 2, title:" Rock the boat", artist:"Rocky", genre:"Rock", rating: "2"},
+             {id: 1, title:"Dansing queen", artist:"Abba", genre:"pop", rating: "2" },
+             {id: 2, title:"Rock the boat", artist:"Rocky", genre:"Rock", rating: "1"},
              {id: 3, title:"JazzSong", artist:"Jazzzz", genre:"Jazz", rating: "3"},
               ],
               selectedGenre: "all"
@@ -21,6 +21,7 @@ class SongOverview extends Component {
      addItemToSongList=( title, artist, genre, rating)=>{
         this.setState({
             songs:[
+                
                 ...this.state.songs,
                 {id: this.state.songs.length + 1,
                 title: title,
@@ -35,9 +36,27 @@ class SongOverview extends Component {
 
      }//title   
 
-     sortSongs=()=>{
-      return  console.log("Entering songoverview/function:sortSong");
-     }
+     sortSongs=(event)=>{
+        const selectedItem = event.target.value
+     // return // console.log("Entering songoverview/function:sortSong/selectedItem:", selectedItem);//works? good job
+      this.setState({sort:selectedItem})
+      switch (selectedItem){
+        case "TAZ": this.setState({songs:this.state.songs.sort((a,b)=>(a.title > b.title ?1: -1))})
+        break
+
+        case "TZA": this.setState({songs:this.state.songs.sort((a,b)=>(a.title > b.title ?-1: 1))})
+        break
+
+        case "SHL": this.setState({songs:this.state.songs.sort((a,b)=>(a.rating > b.rating ?1: -1))})
+        break
+
+        
+        
+        default:
+            console.log(" swicht of sortSongs")
+     
+     }//switch
+    }//event
 
 //hier komen de functies
 
