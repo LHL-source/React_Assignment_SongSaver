@@ -12,7 +12,7 @@ function SongSort ({sortering, handleClickSort}) {
 
         <select 
         name="sortering"
-       // value={sortering.value}
+        //value={sortering.value}
         onChange={handleClickSort}
         >
             <option value="">--choose please an item---</option>

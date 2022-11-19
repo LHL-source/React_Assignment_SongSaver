@@ -18,7 +18,12 @@ class SongOverview extends Component {
              };//state
      }//constructor
 
-     addItemToSongList=( title, artist, genre, rating)=>{
+        //   capitalizeSong=(str)=>{
+        //        return str.chartArt(0).toUpperCase() + str.slice(1)
+        //   }
+
+
+      addItemToSongList=( title, artist, genre, rating)=>{
         this.setState({
             songs:[
                 
@@ -36,6 +41,7 @@ class SongOverview extends Component {
 
      }//title   
 
+    
      sortSongs=(event)=>{
         const selectedItem = event.target.value
      // return // console.log("Entering songoverview/function:sortSong/selectedItem:", selectedItem);//works? good job
@@ -47,9 +53,11 @@ class SongOverview extends Component {
         case "TZA": this.setState({songs:this.state.songs.sort((a,b)=>(a.title > b.title ?-1: 1))})
         break
 
-        case "SHL": this.setState({songs:this.state.songs.sort((a,b)=>(a.rating > b.rating ?1: -1))})
+        case "SHL": this.setState({songs:this.state.songs.sort((a,b)=>(a.rating > b.rating ?-1: 1))})
         break
 
+        case "SLH": this.setState({songs:this.state.songs.sort((a,b)=>(a.rating > b.rating ?1: -1))})
+        break
         
         
         default:
@@ -62,6 +70,13 @@ class SongOverview extends Component {
 
 
         render() {
+
+           // const capitalizeSong=(str)=>{
+             //   return str.chartArt(0).toUpperCase() + str.slice(1)
+            // }
+
+
+           
             return (
                 <div className="overview">
                     <SongList 
@@ -82,3 +97,4 @@ class SongOverview extends Component {
 }//component
 
 export default SongOverview;
+//regel 32  title: capitalizeSong(title),
