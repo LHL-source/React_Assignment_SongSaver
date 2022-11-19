@@ -5,31 +5,31 @@ import SongSort from './SongSort';
 
 
 
-class SongOverview extends Component {
+ export class SongOverview extends Component {
     constructor (props){
         super(props);
         this.state= {
             songs:[
              {id: 1, title:"Dansing queen", artist:"Abba", genre:"pop", rating: "2" },
              {id: 2, title:"Rock the boat", artist:"Rocky", genre:"Rock", rating: "1"},
-             {id: 3, title:"JazzSong", artist:"Jazzzz", genre:"Jazz", rating: "3"},
+             {id: 3, title:"Jazz Song", artist:"Jazz Artist", genre:"Jazz", rating: "3"},
               ],
               selectedGenre: "all"
              };//state
      }//constructor
 
-        //   capitalizeSong=(str)=>{
-        //        return str.chartArt(0).toUpperCase() + str.slice(1)
-        //   }
+        capitalizeSong=(str)=>{
+            return str.chartArt(0).toUpperCase() + str.slice(1)
+           }
 
 
-      addItemToSongList=( title, artist, genre, rating)=>{
+     addItemToSongList=( title, artist, genre, rating)=>{
         this.setState({
             songs:[
                 
                 ...this.state.songs,
                 {id: this.state.songs.length + 1,
-                title: title,
+                title:  capitalizeSong(title),
                 artist: artist,
                 genre: genre,
                 rating: rating,
@@ -42,7 +42,7 @@ class SongOverview extends Component {
      }//title   
 
     
-     sortSongs=(event)=>{
+ sortSongs=(event)=>{
         const selectedItem = event.target.value
      // return // console.log("Entering songoverview/function:sortSong/selectedItem:", selectedItem);//works? good job
       this.setState({sort:selectedItem})
@@ -66,16 +66,8 @@ class SongOverview extends Component {
      }//switch
     }//event
 
-//hier komen de functies
-
-
-        render() {
-
-           // const capitalizeSong=(str)=>{
-             //   return str.chartArt(0).toUpperCase() + str.slice(1)
-            // }
-
-
+    
+    render() {
            
             return (
                 <div className="overview">
@@ -96,5 +88,6 @@ class SongOverview extends Component {
         }//render
 }//component
 
-export default SongOverview;
+//regel 99 export default SongOverview;
 //regel 32  title: capitalizeSong(title),
+//regel 72: render() { naar regel 20
