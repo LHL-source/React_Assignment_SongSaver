@@ -18,9 +18,9 @@ import SongSort from './SongSort';
              };//state
      }//constructor
 
-        // capitalizeSong=(str)=>{
-        //     return str.chartArt(0).toUpperCase() + str.slice(1)
-        //    }
+        capitalizeSong=(str)=>{
+            return str.chartArt(0).toUpperCase() + str.slice(1)
+           }
 
 
      addItemToSongList=( title, artist, genre, rating)=>{
@@ -29,7 +29,7 @@ import SongSort from './SongSort';
                 
                 ...this.state.songs,
                 {id: this.state.songs.length + 1,
-                title: title,
+                title: capitalizeSong(title),
                 artist: artist,
                 genre: genre,
                 rating: rating,
