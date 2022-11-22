@@ -5,22 +5,28 @@ import SongSort from './SongSort';
 
 
 
-class SongOverview extends Component {
+ export class SongOverview extends Component {
     constructor (props){
         super(props);
         this.state= {
             songs:[
-             {id: 1, title:"Dansing queen", artist:"Abba", genre:"pop", rating: "1" },
-             {id: 2, title:" Rock the boat", artist:"Rocky", genre:"Rock", rating: "2"},
-             {id: 3, title:"JazzSong", artist:"Jazzzz", genre:"Jazz", rating: "3"},
+             {id: 1, title:"Dansing queen", artist:"Abba", genre:"pop", rating: "2" },
+             {id: 2, title:"Rock the boat", artist:"Rocky", genre:"Rock", rating: "1"},
+             {id: 3, title:"Jazz Song", artist:"Jazz Artist", genre:"Jazz", rating: "3"},
               ],
               selectedGenre: "all"
              };//state
      }//constructor
 
+        // capitalizeSong=(str)=>{
+        //     return str.chartArt(0).toUpperCase() + str.slice(1)
+        //    }
+
+
      addItemToSongList=( title, artist, genre, rating)=>{
         this.setState({
             songs:[
+                
                 ...this.state.songs,
                 {id: this.state.songs.length + 1,
                 title: title,
@@ -35,14 +41,34 @@ class SongOverview extends Component {
 
      }//title   
 
-     sortSongs=()=>{
-      return  console.log("Entering songoverview/function:sortSong");
-     }
+    
+ sortSongs=(event)=>{
+        const selectedItem = event.target.value
+     // return // console.log("Entering songoverview/function:sortSong/selectedItem:", selectedItem);//works? good job
+      this.setState({sort:selectedItem})
+      switch (selectedItem){
+        case "TAZ": this.setState({songs:this.state.songs.sort((a,b)=>(a.title > b.title ?1: -1))})
+        break
 
-//hier komen de functies
+        case "TZA": this.setState({songs:this.state.songs.sort((a,b)=>(a.title > b.title ?-1: 1))})
+        break
 
+        case "SHL": this.setState({songs:this.state.songs.sort((a,b)=>(a.rating > b.rating ?-1: 1))})
+        break
 
-        render() {
+        case "SLH": this.setState({songs:this.state.songs.sort((a,b)=>(a.rating > b.rating ?1: -1))})
+        break
+        
+        
+        default:
+            console.log(" swicht of sortSongs")
+     
+     }//switch
+    }//event
+
+    
+    render() {
+           
             return (
                 <div className="overview">
                     <SongList 
@@ -62,4 +88,10 @@ class SongOverview extends Component {
         }//render
 }//component
 
-export default SongOverview;
+//regel 99 export default SongOverview;
+//regel 32  title: capitalizeSong(title),
+//regel 72: render() { naar regel 20
+//r 21 t/m 23   capitalizeSong=(str)=>{
+  //  return str.chartArt(0).toUpperCase() + str.slice(1)
+//}
+//regel 32  title: capitalizeSong(title),
