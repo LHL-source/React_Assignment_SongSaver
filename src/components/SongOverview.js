@@ -18,9 +18,9 @@ import SongSort from './SongSort';
              };//state
      }//constructor
 
-        capitalizeSong=(str)=>{
-            return str.chartArt(0).toUpperCase() + str.slice(1)
-           }
+        // capitalizeSong=(str)=>{
+        //     return str.chartArt(0).toUpperCase() + str.slice(1)
+        //    }
 
 
      addItemToSongList=( title, artist, genre, rating)=>{
@@ -29,7 +29,7 @@ import SongSort from './SongSort';
                 
                 ...this.state.songs,
                 {id: this.state.songs.length + 1,
-                title:  capitalizeSong(title),
+                title: title,
                 artist: artist,
                 genre: genre,
                 rating: rating,
@@ -91,3 +91,7 @@ import SongSort from './SongSort';
 //regel 99 export default SongOverview;
 //regel 32  title: capitalizeSong(title),
 //regel 72: render() { naar regel 20
+//r 21 t/m 23   capitalizeSong=(str)=>{
+  //  return str.chartArt(0).toUpperCase() + str.slice(1)
+//}
+//regel 32  title: capitalizeSong(title),
