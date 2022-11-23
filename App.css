@@ -25,7 +25,7 @@
 
 }
 .songformbutton {
-  background-color: #4CAF50;
+  background-color: rgb(238, 91, 91);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -35,4 +35,23 @@
   font-size: 15px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+.songforminput{
+  background-color: lightslategray;
+}
+
+.songforminput input{
+  width: 150px;
+  height: 50px
+}
+
+.songforminput select{
+  width: 150px;
+  height: 53px
+}
+
+.sortering select{
+  width: 200px;
+  height: 53px
 }
