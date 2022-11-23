@@ -19,7 +19,7 @@ import SongSort from './SongSort';
      }//constructor
 
         capitalizeSong=(str)=>{
-            return str.chartArt(0).toUpperCase() + str.slice(1)
+            return str.charAt(0).toUpperCase() + str.slice(1)
            }
 
 
@@ -29,7 +29,7 @@ import SongSort from './SongSort';
                 
                 ...this.state.songs,
                 {id: this.state.songs.length + 1,
-                title: capitalizeSong(title),
+                title: this.capitalizeSong(title),
                 artist: artist,
                 genre: genre,
                 rating: rating,
@@ -45,6 +45,7 @@ import SongSort from './SongSort';
  sortSongs=(event)=>{
         const selectedItem = event.target.value
      // return // console.log("Entering songoverview/function:sortSong/selectedItem:", selectedItem);//works? good job
+     console.log(this.setState);
       this.setState({sort:selectedItem})
       switch (selectedItem){
         case "TAZ": this.setState({songs:this.state.songs.sort((a,b)=>(a.title > b.title ?1: -1))})
