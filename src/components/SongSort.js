@@ -6,9 +6,9 @@ function SongSort ({sortering, handleClickSort}) {
     return (
 
         <form className="sortering">
-            <p>
+            <h1>
               How to sort the songs?  
-            </p>
+            </h1>
 
         <select 
         name="sortering"

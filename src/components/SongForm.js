@@ -44,20 +44,17 @@ const SongForm =({onSubmit})=>{
 
     return(
         
-        <form className='songform'>
-            <p>this is SongForm state of inputTitle: {inputTitle}</p>
-            <p>this is SongForm state of inputArtist: {inputArtist}</p>
-            <p>this is SongForm state of dropDownGenre: {dropDownGenre}</p>
-            <p>this is SongForm state of dropRate: {dropDownRate}</p>
-           
+        <form className='songforminput'>
            
             <input type="text"
+                   placeholder="please give a title"
                    value={inputTitle}
                    name="inputTitle"
                    onChange={(e)=>{setInputTitle(e.target.value)}} 
             />
    
            <input type="text"
+                  placeholder="please give a name "
                    value={inputArtist}
                    name="inputArtist"
                    onChange={(e)=>{setInputArtist(e.target.value)}} 
@@ -66,20 +63,21 @@ const SongForm =({onSubmit})=>{
             <select value={dropDownGenre} onChange={(e)=>{setDropDownGenre(e.target.value)}}>
                 <option value="pop">pop</option>   
                 <option value="rock">rock</option>
-                 <option value="jazz">jazz</option>  
+                <option value="jazz">jazz</option>  
             </select>
 
             <select value={dropDownRate} onChange={(e)=>{setDropDownRate(e.target.value)}}>
                 <option value="1">1</option>   
                 <option value="2">2</option>
-                 <option value="3">3</option>  
+                <option value="3">3</option>  
                 
             </select>
            
             <button type="submit"
                     className="songformbutton" 
                     onClick ={onButtonPress}
-                    placeholder="Submit">
+                    placeholder="submit"
+                    >
                     
             </button>
         </form> 
@@ -98,3 +96,7 @@ export default SongForm
   //          <option value="rock">rock</option>
    //         <option value="jazz">jazz</option>  
  //           </select>
+//  <p>this is SongForm state of inputTitle: {inputTitle}</p>
+//  <p>this is SongForm state of inputArtist: {inputArtist}</p>
+//  <p>this is SongForm state of dropDownGenre: {dropDownGenre}</p>
+//  <p>this is SongForm state of dropRate: {dropDownRate}</p>
