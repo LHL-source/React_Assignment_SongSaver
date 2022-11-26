@@ -9,7 +9,7 @@ function SongList({songs, onItemTitleAdd, selectedGenre}) {
         <div>
         <ul className="songcontainerUl">
         <li className="songcontainerLi">
-            <p>id</p>
+            <p>Id</p>
             <p>Title</p>
             <p>Artist</p>  
             <p>Genre</p> 

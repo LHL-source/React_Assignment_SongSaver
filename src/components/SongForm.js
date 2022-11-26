@@ -78,7 +78,7 @@ const SongForm =({onSubmit})=>{
                     onClick ={onButtonPress}
                     placeholder="submit"
                     >
-                    
+                Add to list
             </button>
         </form> 
 

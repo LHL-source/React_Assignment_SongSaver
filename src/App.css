@@ -11,6 +11,12 @@
  gap: 200px;
 }
 
+.songcontainerLi p {
+  color:red;
+  font-size: 25px;
+  text-decoration: underline;
+}
+
 .listcontainer{
   background-color:lightpink;
   display:flex;
@@ -19,26 +25,36 @@
  gap: 200px;
 }
 
+.listcontainer p {
+  font-size: 25px; 
+  text-align: left;
+} 
+
+
 .songformbutton{
   background-color:lightcoral;
   
 
 }
 .songformbutton {
-  background-color: rgb(238, 91, 91);
-  border: none;
-  color: white;
+  background-color: lightgray;
+  border:black;
+  color: black;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+
+  width: 150px;
+  height: 52px;
+
   font-size: 15px;
   margin: 4px 2px;
   cursor: pointer;
 }
 
 .songforminput{
-  background-color: lightslategray;
+  background-color: whitesmoke;
 }
 
 .songforminput input{
