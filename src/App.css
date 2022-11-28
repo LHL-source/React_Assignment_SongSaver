@@ -3,7 +3,11 @@
   background-color:lightgrey;
 }
 
+.songcontainerUl{
+  padding: 0px;
+}
 .songcontainerLi {
+ padding: 0px;
  background-color:greenyellow;
  display:flex;
  flex-direction: row;
@@ -16,8 +20,11 @@
   font-size: 25px;
   text-decoration: underline;
 }
-
 .listcontainer{
+  list-style-type:none;
+}
+
+.ttz{
   background-color:lightpink;
   display:flex;
  flex-direction: row;
