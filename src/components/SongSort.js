@@ -19,8 +19,8 @@ function SongSort ({sortering, handleClickSort}) {
             <option value="TAZ">title a-z</option>
             <option value="TZA">title z-a</option>
             
-            <option value="SHL">stars 5-1</option>
-            <option value="SLH">starts 1-5</option>
+            <option value="SHL">stars 3-1</option>
+            <option value="SLH">starts 1-3</option>
            
         </select>
         </form>

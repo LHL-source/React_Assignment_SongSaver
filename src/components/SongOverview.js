@@ -34,12 +34,12 @@ import SongSort from './SongSort';
                 genre: genre,
                 rating: rating,
                 }
-            ],//songs
+            ],
             sort : "",
 
-        })//setState
+        })
 
-     }//title   
+     }  
 
     
  sortSongs=(event)=>{

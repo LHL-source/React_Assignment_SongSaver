@@ -1,6 +1,9 @@
+
+
 export function About(){
-    return <div> <h1>About the project SongSaver-Lily: in these app the user can use the songsaver buttom to</h1>
-            <h2> add new song title, song artist, genre and rating to the songlist</h2>
+    return <div className= "abouttext"> <h1>About the project SongSaver:these is once of the React assignment
+        the functionalty is:  in these app the user can use the songsaver button to</h1>
+            <h2> add new song title and with the button "chose please an item " to make a choice.</h2>
             </div>
 
             }
