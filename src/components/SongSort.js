@@ -1,8 +1,7 @@
 import React from 'react'
 
 function SongSort ({sortering, handleClickSort}) {
-    // console.log("entering SongSort");
-    // console.log(`Entering SongSort`);
+    
     return (
 
         <form className="sortering">
@@ -24,12 +23,10 @@ function SongSort ({sortering, handleClickSort}) {
            
         </select>
         </form>
-    )//return
+    )
 
-}//function
+}
 
 
 export default SongSort;
 
-//regel 21<option value="AAZ">artist a-z</option>
-//regel 22<option value="AAZ">artist a-z</option>

@@ -46,16 +46,7 @@ function App() {
 
    
     </div>
-  );//return
-}//App
+  );
+}
 
 export default App;
-//regel 3:import {SongOverview} from './components/SongOverview.js';
-//regel 47 tm 53
-//<div className="App">
-
-// <h1>SongSaver oct
-//2022</h1>
-//<h1><SongOverview /></h1>
-
-//</div> 

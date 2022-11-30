@@ -1,11 +1,9 @@
-//import React from "react";
+
 import React, {Component} from 'react';
 import SongList from './SongList';
 import SongSort from './SongSort';
 
-
-
- export class SongOverview extends Component {
+export class SongOverview extends Component {
     constructor (props){
         super(props);
         this.state= {
@@ -15,8 +13,8 @@ import SongSort from './SongSort';
              {id: 3, title:"Jazz Song", artist:"Jazz Artist", genre:"Jazz", rating: "3"},
               ],
               selectedGenre: "all"
-             };//state
-     }//constructor
+             };
+     }
 
         capitalizeSong=(str)=>{
             return str.charAt(0).toUpperCase() + str.slice(1)
@@ -44,7 +42,7 @@ import SongSort from './SongSort';
     
  sortSongs=(event)=>{
         const selectedItem = event.target.value
-     // return // console.log("Entering songoverview/function:sortSong/selectedItem:", selectedItem);//works? good job
+     
      console.log(this.setState);
       this.setState({sort:selectedItem})
       switch (selectedItem){
@@ -64,8 +62,8 @@ import SongSort from './SongSort';
         default:
             console.log(" swicht of sortSongs")
      
-     }//switch
-    }//event
+     }
+    }
 
     
     render() {
@@ -85,14 +83,7 @@ import SongSort from './SongSort';
 
                 </div>
                 
-                   );//return
-        }//render
-}//component
+                   );
+        }
+}
 
-//regel 99 export default SongOverview;
-//regel 32  title: capitalizeSong(title),
-//regel 72: render() { naar regel 20
-//r 21 t/m 23   capitalizeSong=(str)=>{
-  //  return str.chartArt(0).toUpperCase() + str.slice(1)
-//}
-//regel 32  title: capitalizeSong(title),
