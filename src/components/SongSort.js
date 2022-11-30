@@ -15,7 +15,7 @@ function SongSort ({sortering, handleClickSort}) {
         //value={sortering.value}
         onChange={handleClickSort}
         >
-            <option value="">--choose please an item---</option>
+            <option value="">--chose please an item---</option>
             <option value="TAZ">title a-z</option>
             <option value="TZA">title z-a</option>
             
